@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="theme-color" content="#99CCFF" />
+<meta
+  id="viewport"
+  name="viewport"
+  content="width=device-width, initial-scale=0.8, minimum-scale=0.8, maximum-scale=0.9, viewport-fit=cover"
+/>
+</head>
+<body>
+<style type="text/css">
+a { text-decoration:none;background-color:transparent;opacity:;}
+body {
+padding:0px;
+margin:0px;
+width:500px;
+height:1000px;
+background-color:#99CCFF;
+background-image:url("");
+background-repeat:no-repeat;
+background-position:;
+background-attachment:scroll;
+background-size:100%;
+position:;
+}
+div{
+box-shadow:2px 2px 2px black;
+background-color:#E0E0E0 , 70%;
+width:400px;
+height:750px;
+margin-block:70px;
+padding-block:0px;
+color:black;
+border-radius:4px;
+background-blend-mode:50px;
+position:;
+margin-left:25px;
+background-image:url("iStock-599703424.jpg");
+background-repeat:no-repeat;
+/*background: rgba(76, 175, 80, 0.5)*/
+background-size:290%;
+background-origin:50px 100px 40px;
+}
+input{ 
+background:rgba(red, 0.3);
+width:calc(70%);
+height:50px;
+margin-block:10px;
+font-size:20px;
+padding-inline-start:50px;
+border-color:#99CCFF;
+outline-color:#99CCFF;
+border-radius:2px;
+border-radius:5px;
+opacity:90%;
+background-color:;
+}
+select { 
+width:calc(83%);
+height:50px;
+margin-block:10px;
+font-size:20px;
+padding-inline-start:50px;
+outline-color:#99CCFF;
+border-width:1px;
+border-radius:5px;
+border-color:#99CCFF;
+opacity:90%;
+}
+.button {
+width:calc(70%);
+height:calc();
+margin-block:50px;
+margin-bottom:10px;
+background-color:#0080FF;
+border:none;
+border-radius:4px;
+box-shadow:2px 2px 2px black;
+font-size:20px;
+font-family:serif;
+text-align:center;
+padding-inline:20px;
+}
+#checkbox {
+width:35px;
+margin-top:;
+margin-right:calc(65%);
+margin-bottom:;
+position:;
+opacity:60%;
+}
+p {
+font-family:Tahoma,Arial,sans-serif;font-size:18px;
+margin-block:-50px;
+background-color:;
+width:350px;
+margin-left:40px;
+}
+h3 {margin-right:calc(55%);font-family:monospace;margin-block:-1px;}
+label {font-size:15px;font-family:monospace;margin-bottom:;margin-right:calc(30%);}
+h2{margin-block:10px;font-size:80px;font-family:cursive;}
+</style>
+<center>
+<div>
+<h2> Instagram</h2>
+<center>
+<input placeholder="your user name" id="user" onchange="back(user)" onblur="back(user)"> <br> 
+<select id="categori" onchange="backe(categori)" onblur="backe(categori)" >
+<option>CATEGORIES</option>
+<option>LIKE</option>
+<option>FOLLOW</option>
+<option>VIEW</option>
+</select> <br> 
+<input placeholder="linke of your profile or post" type="url" id="profile" onblur="back(profile)" onchange="back(profile)" > <br> 
+<select id="gift" onblur="backe(gift)" onchange="backe(gift)">
+<option>YOUR GIFT</option>
+<option>100</option>
+<option>500</option>
+<option>1000</option>
+<option>2000</option>
+</select> <br>  <label>
+ find date of request :  </label>
+<input type="date"  id="time"  onblur="back(time)" onchange="back(time)"> <br> 
+<select id="method" onblur="backe(method)" onchange="backe(method)"> 
+<option>FREE</option>
+<option>VIP</option>
+</select> <br> 
+
+<input type="checkbox" id="checkbox" onchange="send()" onclick="let x = 1"> 
+ <p> I agree to the terms of use and <b><br> privacy policy</b></p><br>
+<br>
+<a id="link"  >
+<input value="confirme"  class="button" onclick="submit()" type="submit" id="sub" ></a>
+</center>
+</div>
+</center>
+
+<script type="text/javascript">
+/*
+function date()
+{
+
+var windo = document.querySelector("#h2");
+var hour = new Date().getHours();
+var minute = new Date().getMinutes();
+var second = new Date().getSeconds();
+windo.innerHTML = hour +"h:" + minute +"m:" +second + "s ";
+}
+setInterval(date,10)
+*/
+let user = document.querySelector("#user");
+let categori = document.querySelector("#categori");
+let profile = document.querySelector("#profile");
+let gift = document.querySelector("#gift");
+let time = document.querySelector("#time");
+let method = document.querySelector("#method");
+let checkbox = document.querySelector("#checkbox");
+let link = document.querySelector("#link");
+let submi = document.querySelector("#sub");
+function back(out)
+{
+if(out.value!="")
+{
+out.style.backgroundColor="#CCFFCC"
+}
+else
+{
+out.style.backgroundColor="#FFCCCC"
+}
+
+}
+
+function backe(out)
+{
+if(out.value!="YOUR GIFT" & out.value!="CATEGORIES")
+{
+ out.style.backgroundColor="#CCFFCC"
+}
+else
+{
+out.style.backgroundColor="#FFCCCC" 
+}
+}
+
+function send()
+{ setTimeout(run,1000)
+function run(){
+if(user.value!="" & categori.value!="CATEGORIES" & profile.value!="" & gift.value!="YOUR GIFT" & time.value!=""){
+link.setAttribute("href","instagram/login.html")
+}
+else
+{
+back(user)
+back(profile)
+back(time)
+backe(gift)
+backe(categori)
+backe(method)
+}
+}}
+
+function submit()
+{
+send()
+}
+
+
+
+</script>
+</body>
+</html>
